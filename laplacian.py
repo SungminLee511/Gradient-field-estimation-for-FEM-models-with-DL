@@ -1,16 +1,7 @@
 import torch
 
-import sys
-import importlib.util
-
-solver_dir = "/home/ubuntu/SML/solver"
-
-sys.path.append(solver_dir)
-
-file_path = "/home/ubuntu/SML/solver/solver.py"
-spec = importlib.util.spec_from_file_location("solver", file_path)
-solver = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(solver)
+from shell_laplacian import *
+import element as solver
 
 def tetrahedral_to_full_edge_data(elements, device='cuda:0'):
     """
