@@ -2,4 +2,4 @@
 
 Estimating target field gradients on FE mesh models, with edge-wise laplacian coordinates and globally inducted input data with post process losses such as element-wise curl vector norm, element wise stress tensor etc.
 
-Experiments were made on SimJEB Jet Engine Bracket Dataset.
+Experiments done on SimJEB Jet Engine Bracket Dataset.
