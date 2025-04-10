@@ -238,6 +238,9 @@ def shell_to_full_edge_data(triangle_elements, square_elements, device='cuda:0')
       - square_orientations: tensor of shape [S,4] with +1 or -1 indicating whether the
                              square’s edge direction agrees with the canonical order.
     """
+    triangle_elements = triangle_elements.to(device)
+    square_elements = square_elements.to(device)
+
     T = triangle_elements.shape[0]
     t_n1 = triangle_elements[:, 0]
     t_n2 = triangle_elements[:, 1]
